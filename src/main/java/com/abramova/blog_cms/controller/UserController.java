@@ -14,10 +14,9 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
     @GetMapping
     private Iterable<User> list() {
-        return  userRepository.findAll();
+        return userRepository.findAll();
     }
 
     @GetMapping("{id}")
@@ -27,11 +26,12 @@ public class UserController {
     }
 
     @PostMapping
-    private void add(@RequestBody Map<String,String> user) {
-        userRepository.save(new User(user.get("name"),user.get("email"),user.get("password")));
+    private void add(@RequestBody Map<String, String> user) {
+        userRepository.save(new User(user.get("name"), user.get("email"), user.get("password")));
     }
+
     @PutMapping("{id}")
-    private void update(@PathVariable Integer id,@RequestBody Map<String,String> user){
+    private void update(@PathVariable Integer id, @RequestBody Map<String, String> user) {
         Optional<User> optionalUser = userRepository.findById(id);
         User user1 = optionalUser.isPresent() ? optionalUser.get() : new User();
         user1.setName(user.get("name"));
@@ -40,10 +40,8 @@ public class UserController {
         userRepository.save(user1);
     }
 
-
-
     @DeleteMapping("{id}")
-    private void delete(@PathVariable Integer id){
+    private void delete(@PathVariable Integer id) {
         userRepository.deleteById(id);
     }
 }
