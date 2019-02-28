@@ -1,4 +1,4 @@
-package com.abramova.test1;
+package com.abramova.blog_cms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.abramova.test1.controller;
+package com.abramova.blog_cms.controller;
 
-import com.abramova.test1.entity.User;
-import com.abramova.test1.repository.UserRepository;
+import com.abramova.blog_cms.entity.User;
+import com.abramova.blog_cms.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,6 @@ public class UserController {
     @GetMapping("{id}")
     private Optional<User> list(@PathVariable Integer id) {
         return userRepository.findById(id);
-
     }
 
     @PostMapping
