@@ -1,4 +1,4 @@
-package com.abramova.test1;
+package com.abramova.blog_cms;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

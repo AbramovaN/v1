@@ -1,4 +1,4 @@
-package com.abramova.test1.entity;
+package com.abramova.blog_cms.entity;
 
 import org.hibernate.annotations.Type;
 

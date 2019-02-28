@@ -1,4 +1,4 @@
-package com.abramova.test1;
+package com.abramova.blog_cms;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
