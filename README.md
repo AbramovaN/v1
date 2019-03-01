@@ -1,7 +1,7 @@
 # Software requirements
  * MySQL Server 8.0 - https://dev.mysql.com/downloads/workbench/
  * Maven - https://maven.apache.org/download.cgi
-#Installation
+# Installation
   * Clone or download the source code from this Github page:
   * $ git clone https://github.com/AbramovaN/v1
   * $ cd v1
