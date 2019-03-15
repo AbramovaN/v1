@@ -5,7 +5,6 @@ import com.abramova.blog_cms.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -20,22 +19,22 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    private Optional<User> list(@PathVariable Integer id) {
+    private Optional<User> getOne(@PathVariable Integer id) {
         return userRepository.findById(id);
     }
 
     @PostMapping
-    private void add(@RequestBody Map<String, String> user) {
-        userRepository.save(new User(user.get("name"), user.get("email"), user.get("password")));
+    private void add(@RequestParam String name, @RequestParam String email, @RequestParam String password) {
+        userRepository.save(new User(name, email, password));
     }
 
     @PutMapping("{id}")
-    private void update(@PathVariable Integer id, @RequestBody Map<String, String> user) {
+    private void update(@PathVariable Integer id, @RequestParam String name, @RequestParam String email, @RequestParam String password) {
         Optional<User> optionalUser = userRepository.findById(id);
         User user1 = optionalUser.isPresent() ? optionalUser.get() : new User();
-        user1.setName(user.get("name"));
-        user1.setEmail(user.get("email"));
-        user1.setPassword(user.get("password"));
+        user1.setName(name);
+        user1.setEmail(email);
+        user1.setPassword(password);
         userRepository.save(user1);
     }
 
