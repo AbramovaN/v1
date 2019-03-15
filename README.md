@@ -5,9 +5,9 @@
   * Clone or download the source code from this Github page:
   * $ git clone https://github.com/AbramovaN/v1
  * Open MySQL Command Line client: enter your password, then :
-######CREATE DATABASE blog;
+###### CREATE DATABASE blog;
    Use command: 
-######SHOW DATABASES;
+###### SHOW DATABASES;
    to make sure that new db with name blog was created.
    ##### You can also create new schema using MySQL Workbench.
    Please, make sure that db properties as username and password same that at 
